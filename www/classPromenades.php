@@ -11,6 +11,7 @@ class Promenades{
     private $lieuDepart;
     private $lieuArrivee;
     private $description;
+    private $ville;
 
     public function __set($name, $value){ }
 
@@ -31,6 +32,8 @@ class Promenades{
     public function getArrivee(){return $this->lieuArrivee;}
     
     public function getDescription(){return $this->description;}
+
+    public function getVille(){return $this->ville;} 
 
 
 }
