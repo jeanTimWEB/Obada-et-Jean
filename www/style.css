@@ -1,47 +1,135 @@
-footer{
-    background-color:rgba(0, 0, 0, 0.212);
+body{
+  padding:0px;
+  margin:0px;
+  background-color: black;
 }
-figure {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .titre{
-    position: absolute;
-    width: 100%;
-    top: 15%;
-    text-align: center;
-    font-family: sans-serif; font-size: 60px;
-    color: #00f;
-  }
-  .pays{
-    position: absolute;
-    width: 100%;
-    top: 25%;
-    text-align: center;
-    font-family: sans-serif; font-size: 60px;
-    color: #00f;
-  }
+footer{
+  background-color:rgba(0, 0, 0, 0.212);
+}
+
+
+.titre{
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  text-align: center;
+  font-family: sans-serif; font-size: 30px;
+  color: rgb(1, 1, 7);
+}
+.pays{
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  left:25%;
+  text-align: center;
+  font-family: sans-serif; font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+.ville{
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  right:25%;
+  text-align: center;
+  font-family: sans-serif; font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+.auteur{
+  position: absolute;
+  width: 100%;
+  top: 75%;
+  text-align: center;
+  font-family: sans-serif; font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+
+a div{
+  background-color:rgba(0, 0, 0, 0.30);
+}
+
+
+
+.txt{
+  display:block;
+  color:black;
+  font-size:25px;
+}
+.centered-bottom.txt{
+  font-size:20px;
+
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+
+.top-left {
+  position: absolute;
+  top: 30%;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 30%;
+  right: 16px;
+}
+
+.centered-bottom {
+  position: absolute;
+  bottom: 5%;
+  left:50%;    
+}
+
+.centered {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight:bold;
+}
+
+.descript{
+  position: absolute;
+  bottom: 10%;
+  left:10%; 
+  font-weight:lighter; 
+  width:80%;
+}
+
+.descript:hover{
+  font-weight:bolder; 
+  width:80%;
+  left:10%;
+}
+
+.pics{
+  min-width: 100px;;
+}
 
 .promnadeInfo h1{
 
-    color: red;
-    font-size: 1.5vw;
+  color: red;
+  font-size: 1.5vw;
 
 }
 
 .promnadeInfo h2{
 
-    color: red;
-    font-size: 1vw;
+  color: red;
+  font-size: 1vw;
 
 }
 
 .promnadeInfo p{
 
-    color: red;
-    font-size: 1.5vw;
-    text-align: center;
-    box-shadow: 5px 10px black;
-    opacity: 0.75;
+  color: red;
+  font-size: 1.5vw;
+  text-align: center;
+  box-shadow: 5px 10px black;
+  opacity: 0.75;
 }
