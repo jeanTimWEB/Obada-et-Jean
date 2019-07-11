@@ -1,3 +1,17 @@
+<?php
+
+require_once("database.php");
+
+$database = new Database();
+
+$allpromenades = $database->getAllPromenades();
+
+//$id = $_GET['id'];
+
+$promenade = $database->getPromenade(1);
+
+?>
+
 <!doctype html>
 
 <html>
@@ -15,7 +29,7 @@
         
         .promnadeInfo{
 
-            background-image:url("assets/bg-ai-1.jpg");
+            background-image:url("<?php echo $promenade->getImage();?>");
             background-repeat: no-repeat;
             background-size: cover;
             min-height: 750px;
@@ -78,11 +92,14 @@
 
                 <div class="offset-2 place col-3 mt-5">
 
-                    <h1>Titre: Promenades didactiques à la rencontre des arbres </h1>
+                    <h1><?php echo $promenade->getTitre();?></h1>
 
-                    <h2>Pays: Suisse</h2>
-                    <h2>Ville: Genève</h2>
-                    <h2>Code Postale: 1205</h2>
+                    <h2><?php echo $promenade->getPays();?></h2>
+                    <h2><?php echo $promenade->getVille();?></h2>
+                    <h2><?php echo $promenade->getCP();?></h2>
+                    <h2><?php echo $promenade->getDepart();?></h2>
+                    <h2><?php echo $promenade->getArrivee();?></h2>
+                    <h2><?php echo $promenade->getAuteur();?></h2> 
 
                 </div>
 
@@ -92,11 +109,7 @@
 
                     <p class=""> 
                     
-                        Parmi les plus de 40'000 arbres que compte Genève,
-                        certains méritent une attention spéciale.
-                        Leurs caractéristiques particulières en font des éléments incontournables du patrimoine arboré genevois. 
-                        Le Service des espaces verts vous invite à la rencontre de 150 arbres, 
-                        à découvrir au détour de six promenades didactiques.
+                    <?php echo $promenade->getDescription();?>
                     
                     </p>
 

@@ -77,6 +77,29 @@ require_once('classPromenades.php');
 
     }
 
+    public function ajouter($titre, $pays,$image, $auteur, $codePostale, $depart, $arrivee, $description, $ville){
+
+        $pdoStatement = $this->connexion->prepare(
+            "INSERT INTO Promenades(titre, pays,image, auteur, codePostale, depart, arrivee, description, ville) VALUES(:titre, :pays, :image, :auteur, :codePostale, :depart, :arrivee, :description, :ville);"
+        );
+
+        $pdoStatement->execute(array(
+            "titre" =>$titre,
+            "pays" =>$pays,
+            "auteur" =>$auteur,
+            "codePostale" =>$codePostale,
+            "depart" =>$depart,
+            "arrivee" =>$arrivee,
+            "description" =>$description,
+            "ville" =>$ville,
+            
+        ));
+
+        $id = $this->connexion->lastInsertId();
+        return $id;
+
+    }
+
         
     }
 

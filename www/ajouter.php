@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE HTML>
 
 <html>  
@@ -10,7 +14,7 @@
 
     <body>
 
-        <form action="process-create.php" method="post">
+        <form action="process-ajouter.php" method="post">
             Titre: <br>
 
             <input type="text" name="titre"> <br>
