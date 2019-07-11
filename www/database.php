@@ -1,5 +1,6 @@
 <?php 
 
+require_once('classPromenades.php');
 
     class Database{
 
@@ -44,25 +45,5 @@
 
         
     }
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>

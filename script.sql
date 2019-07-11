@@ -17,3 +17,5 @@ CREATE TABLE Promenades(
 );
 ---------------------------------------------
 
+INSERT into Promenades(titre, pays, image, auteur, codePostale, depart, arrivee, description)
+VALUE ('Promenades didactiques à la rencontre des arbres', 'Suisse', 'http://www.ville-geneve.ch/fileadmin/public/images/agenda_et_actualites/150_ans_SEVE/sentier-bois-de-la-batie-agenda-et-actualites-ville-geneve-cover.jpg','VilleGeneve',1200,'Eaux-vives','Gare','Parmi les plus de 40000 arbres que compte Genève, certains méritent une attention spéciale. Leurs caractéristiques particulières en font des éléments incontournables du patrimoine arboré genevois. Le Service des espaces verts vous invite à la rencontre de 150 arbres, à découvrir au détour de six promenades didactiques.');
