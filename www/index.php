@@ -1,17 +1,44 @@
 <?php 
-//require_once('classPromenades');
+
+// Import de la databse
+require_once("database.php");
+// Création de la connexion
+$database = new Database();
+// Récupérer l'id depuis l'url
+
+
+$promenade = $database->getPromenade(1);
+
+//var_dump($promenade);
+
+$titre = $promenade->getTitre();
+$pays = $promenade->getPays();
+$image = $promenade->getImage();
+$ville = $promenade->getVille();
+$auteur = $promenade->getAuteur();
+$CP = $promenade->getCP();
+$depart = $promenade->getDepart();
+$arrivee = $promenade->getArrivee();
+$description= $promenade->getDescription();
+
+
+
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Annuaire de Ballades</title>
-    <meta http-equiv="Content-Type" content="txt/html;charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
 
 
 
@@ -78,22 +105,18 @@
         <!----ROW-->
         <div class="row no-gutters  justify-content-around">
 
-
-
-
-            <div class="col-xl-2 col-xs-6">
+            <div class="col-xl-4 col-xs-6">
                 <div class="container ">
-                    <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"> </a>
-                        <div class="centered txt">Ma super Ballade</div>
-                        <div class="top-left txt">Suisse</div>
-                        <div class="top-right txt">Appenzeler</div>
-                        <div class="centered-bottom txt">par Jean-Louis</div>
-                        <div class="descript ">Entre les vallons de l'Appenzeler, la promenade va vous emmener
-                                découvrire les plus beau lieu de l'Appenzeler. Faune et fleurs de montagne au rendez-vous.</div>
+                    <a href="afficherInfo.html"> <img class="pics" src="<?php echo $image ?>" alt="Snow" style="width:100%;"> </a>
+                        <div class="centered txt"><?php echo $titre ?></div>
+                        <div class="top-left txt"><?php echo $pays ?></div>
+                        <div class="top-right txt"><?php echo $ville ?></div>
+                        <div class="centered-bottom txt"><?php echo $auteur ?></div>
+                        <div class="descript "><?php echo $description ?></div>
                    
                 </div>
             </div>
-            <div class="col-xl-2 col-xs-6">
+            <div class="col-xl-4 col-xs-6">
                 <div class="container">
                     <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"> </a>
                         <div class="centered txt">Ma super Ballade</div>
@@ -105,7 +128,7 @@
                    
                 </div>
             </div>
-            <div class="col-xl-2 col-xs-6">
+            <div class="col-xl-4 col-xs-6">
                 <div class="container">
                     <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"> </a>
                         <div class="centered txt">Ma super Ballade</div>
@@ -117,49 +140,13 @@
                    
                 </div>
             </div>
-            <div class="col-xl-2 col-xs-6">
-                <div class="container">
-                    <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"> </a>
-                        <div class="centered txt">Ma super Ballade</div>
-                        <div class="top-left txt">Suisse</div>
-                        <div class="top-right txt">Appenzeler</div>
-                        <div class="centered-bottom txt">par Jean-Louis</div>
-                        <div class="descript ">Entre les vallons de l'Appenzeler, la promenade va vous emmener
-                                découvrire les plus beau lieu de l'Appenzeler. Faune et fleurs de montagne au rendez-vous.</div>
-                   
-                </div>
-            </div>
-            <div class="col-xl-2 col-xs-6">
-                <div class="container">
-                    <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"></a>
-                        <div class="centered txt">Ma super Ballade</div>
-                        <div class="top-left txt">Suisse</div>
-                        <div class="top-right txt">Appenzeler</div>
-                        <div class="centered-bottom txt">par Jean-Louis</div>
-                        <div class="descript ">Entre les vallons de l'Appenzeler, la promenade va vous emmener
-                                découvrire les plus beau lieu de l'Appenzeler. Faune et fleurs de montagne au rendez-vous.</div>
-                    
-                </div>
-            </div>
-            <div class="col-xl-2 col-xs-6">
-                <div class="container">
-                    <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"> </a>
-                        <div class="centered txt">Ma super Ballade</div>
-                        <div class="top-left txt">Suisse</div>
-                        <div class="top-right txt">Appenzeler</div>
-                        <div class="centered-bottom txt">par Jean-Louis</div>
-                        <div class="descript ">Entre les vallons de l'Appenzeler, la promenade va vous emmener
-                                découvrire les plus beau lieu de l'Appenzeler. Faune et fleurs de montagne au rendez-vous.</div>
-                   
-                </div>
-            </div>
-        </div>
-        <!----ROW-->
+           
+        </div>        
         <br>
         <!----ROW-->
         <div class="row  no-gutters flex-lg-wrap">
 
-                <div class="col-xl-2 col-xs-6">
+                <div class="col-xl-4 col-xs-6">
                 <div class="container">
                     <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"></a>
                         <div class="centered txt">Ma super Ballade</div>
@@ -171,7 +158,7 @@
                     
                 </div>
             </div>
-            <div class="col-xl-2 col-xs-6">
+            <div class="col-xl-4 col-xs-6">
                 <div class="container">
                     <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"> </a>
                         <div class="centered txt">Ma super Ballade</div>
@@ -183,7 +170,7 @@
                    
                 </div>
             </div>
-            <div class="col-xl-2 col-xs-6">
+            <div class="col-xl-4 col-xs-6">
                 <div class="container">
                     <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"> </a>
                         <div class="centered txt">Ma super Ballade</div>
@@ -195,46 +182,10 @@
                    
                 </div>
             </div>
-            <div class="col-xl-2 col-xs-6">
-                <div class="container">
-                    <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"></a>
-                        <div class="centered txt">Ma super Ballade</div>
-                        <div class="top-left txt">Suisse</div>
-                        <div class="top-right txt">Appenzeler</div>
-                        <div class="centered-bottom txt">par Jean-Louis</div>
-                        <div class="descript ">Entre les vallons de l'Appenzeler, la promenade va vous emmener
-                                découvrire les plus beau lieu de l'Appenzeler. Faune et fleurs de montagne au rendez-vous.</div>
-                    
-                </div>
-            </div>
-            <div class="col-xl-2 col-xs-6">
-                <div class="container">
-                    <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"></a>
-                        <div class="centered txt">Ma super Ballade</div>
-                        <div class="top-left txt">Suisse</div>
-                        <div class="top-right txt">Appenzeler</div>
-                        <div class="centered-bottom txt">par Jean-Louis</div>
-                        <div class="descript ">Entre les vallons de l'Appenzeler, la promenade va vous emmener
-                                découvrire les plus beau lieu de l'Appenzeler. Faune et fleurs de montagne au rendez-vous.</div>
-                    
-                </div>
-            </div>
-            <div class="col-xl-2 col-xs-6">
-                <div class="container lastpics">
-                    <a href="afficherInfo.html"> <img class="pics" src="assets/B1.jpg" alt="Snow" style="width:100%;"></a>
-                    <div class="centered txt">Ma super Ballade</div>
-                    <div class="top-left txt">Suisse</div>
-                    <div class="top-right txt">Appenzeler</div>
-                    <div class="centered-bottom txt">par Jean-Louis</div>
-                    <div class="descript ">Entre les vallons de l'Appenzeler, la promenade va vous emmener
-                        découvrire les plus beau lieu de l'Appenzeler. Faune et fleurs de montagne au rendez-vous.</div>
-
-                </div>
-            </div>
+            
         </div>
-        <!----ROW-->
-
         <br>
+        <!----ROW-->
     </section>
 
 
