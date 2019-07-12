@@ -7,8 +7,9 @@ $database = new Database();
 $allpromenades = $database->getAllPromenades();
 
 //$id = $_GET['id'];
+$id = 1;
 
-$promenade = $database->getPromenade(1);
+$promenade = $database->getPromenade($id);
 
 ?>
 
@@ -70,7 +71,7 @@ $promenade = $database->getPromenade(1);
 
                     <li class="nav-item">
 
-                        <a class="nav-link" href="#">Modifier</a>
+                        <a class="nav-link" href="modifier.php?id=<?php echo $id ;?>">Modifier</a>
 
                     </li>
 

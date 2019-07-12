@@ -76,11 +76,6 @@ $description= $promenade->getDescription();
 
                         </li>
 
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="#">Modifier</a>
-
-                        </li>
 
                     </ul>
 
