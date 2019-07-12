@@ -38,7 +38,11 @@ require_once('classPromenades.php');
                 
             }
         //methodes - comportement
-
+    //methodes - comportement
+    public function getConnexion()
+    {
+        return $this->connexion;
+    }
     // Fonction qui récupère une promenade en fonction de son id
     public function getPromenade($id){
         // Je prépare ma requete
@@ -77,7 +81,7 @@ require_once('classPromenades.php');
 
     }
 
-    public function ajouter($titre, $pays,$image, $auteur, $codePostale, $depart, $arrivee, $description, $ville){
+    public function ajouter( $titre, $pays,$image, $auteur, $codePostale, $depart, $arrivee, $description, $ville){
 
         $pdoStatement = $this->connexion->prepare(
             "INSERT INTO Promenades(titre, pays,image, auteur, codePostale, depart, arrivee, description, ville) VALUES(:titre, :pays, :image, :auteur, :codePostale, :depart, :arrivee, :description, :ville);"
@@ -91,7 +95,7 @@ require_once('classPromenades.php');
             "depart" =>$depart,
             "arrivee" =>$arrivee,
             "description" =>$description,
-            "ville" =>$ville,
+            "ville" =>$ville
             
         ));
 
@@ -100,7 +104,43 @@ require_once('classPromenades.php');
 
     }
 
+//--------------------------------------------------------------------
+    public function modifier($id, $titre, $pays,$image, $auteur, $codePostale, $depart, $arrivee, $description, $ville){
+
+        $pdoStatement = $this->connexion->prepare(
+            "UPDATE Promenades
+            SET 
+            titre = :titre,
+            pays = :pays,
+            image = :image,
+            auteur = :auteur,
+            codePostale = :codePostale,
+            depart = :depart,
+            arrivee = :arrivee,
+            description = :description,
+            ville = :ville
+            
+            where id = :id;");    
+
+        $pdoStatement->execute([
+            'titre' => $titre,
+            'pays' => $pays,
+            'image' => $image,
+            'auteur' => $auteur,
+            'codePostale' => $codePostale,
+            'depart' => $depart,
+            'arrivee' => $arrivee,
+            'description' => $description,
+            'ville' => $ville,
+            'id' => $id
+        ]);  
         
+
     }
+
+//--------------------------------------------------------------------
+
+        
+    }//fin database
 
 ?>
