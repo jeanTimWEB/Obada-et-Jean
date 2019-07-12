@@ -67,7 +67,7 @@
 
         </nav>
 
-        <form action="process-ajouter.php" method="post" class="mt-5">
+        <form action="process-ajouter.php" method="post" class="mt-5" enctype="multipart/form-data">
 
             <div class="row">
 
@@ -99,7 +99,7 @@
 
                     Image: <br>
 
-                    <input type="text" name="image"> <br>
+                    <input type="file" name="image"> <br>
 
                     Auteur: <br>
 

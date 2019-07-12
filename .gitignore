@@ -1,6 +1,8 @@
 /data/mysql/*
 /logs/mysql/*
 /logs/apache2/*
+/www/uploads/*
 !/data/mysql/.gitkeep
 !/logs/mysql/.gitkeep
 !/logs/apache2/.gitkeep
+!/www/uploads/.gitkeep
