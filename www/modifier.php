@@ -48,19 +48,13 @@ require_once("database.php");
 
                         <li class="nav-item ">
 
-                            <a class="nav-link " href="#">Index </a>
+                            <a class="nav-link " href="index.php">Index </a>
 
                         </li>
 
                         <li class="nav-item">
 
-                            <a class="nav-link " href="#">Ajouter</a>
-
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link active" href="#">Modifier</a>
+                            <a class="nav-link " href="ajouter.php">Ajouter</a>
 
                         </li>
 

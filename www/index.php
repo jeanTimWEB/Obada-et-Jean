@@ -195,7 +195,7 @@ $description= $promenade->getDescription();
     <footer>
         <!--Jean-->
 
-        <div class="container-fluid ">
+        <div class="container-fluid fixed-bottom bg-light">
 
             <!-- Grid row -->
             <div class="row justify-content-around align-items-center">
