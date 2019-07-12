@@ -107,7 +107,7 @@ $description= $promenade->getDescription();
 
             <div class="col-xl-4 col-xs-6">
                 <div class="container ">
-                    <a href="afficherInfo.html"> <img class="pics" src="<?php echo $image ?>" alt="Snow" style="width:100%;"> </a>
+                    <a href="afficherInfo.php?id=1"> <img class="pics" src="<?php echo $image ?>" alt="Snow" style="width:100%;"> </a>
                         <div class="centered txt"><?php echo $titre ?></div>
                         <div class="top-left txt"><?php echo $pays ?></div>
                         <div class="top-right txt"><?php echo $ville ?></div>
@@ -247,13 +247,12 @@ $description= $promenade->getDescription();
                 <!-- Call to action -->
 
             </div>
-            
+
         </div>
 
     </footer>
     <!-- Footer -->
-
-
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

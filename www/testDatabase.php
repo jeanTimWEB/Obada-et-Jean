@@ -27,4 +27,6 @@ else
     //mot de passse du user pour se connecter
     $PARAM_mot_passe='Annu@ireT0ut0u';</h2><br>";*/ echo "INDEED!! ";
 }
+
+$database->modifier(1, 'lkjs', 'drfg','', 'tr', 1220, 'dfgg', 'dfgfg', 'trztz', 'dfhh');
 ?>
