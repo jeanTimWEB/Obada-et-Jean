@@ -1,6 +1,6 @@
 <?php
 //require_once('classPromenades.php');
-require_once("database.php");
+require_once "database.php";
 
   //  $promenade = new Promenades();
     $database = new Database();

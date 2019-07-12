@@ -1,5 +1,5 @@
 <?php
-require_once("database.php");
+require_once "database.php";
 //j'affiche le titre
 echo "<h1> Test de la Database </h1>";
 
@@ -9,8 +9,7 @@ $database = new Database();
 //affiche -debugg du contenu de la variable
 //var_dump($database); 
 
-if($database->getConnexion() == NULL)
-{
+if($database->getConnexion() == null) {
     echo "<h2> la connexion a échoué </h2>" ; 
 }
 else
@@ -28,5 +27,5 @@ else
     $PARAM_mot_passe='Annu@ireT0ut0u';</h2><br>";*/ echo "INDEED!! ";
 }
 
-$database->modifier(1, 'lkjs', 'drfg','', 'tr', 1220, 'dfgg', 'dfgfg', 'trztz', 'dfhh');
+$database->modifier(1, 'lkjs', 'drfg', '', 'tr', 1220, 'dfgg', 'dfgfg', 'trztz', 'dfhh');
 ?>

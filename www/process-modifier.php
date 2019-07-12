@@ -1,6 +1,6 @@
 <?php 
 
-require_once('database.php');
+require_once 'database.php';
 
 $database = new Database();
 
@@ -18,7 +18,7 @@ $ville = $_POST ['ville'];
 
 
 //modifier($id, $titre, $pays,$image, $auteur, $codePostale, $depart, $arrivee, $description, $ville)
-$modifier = $database->modifier($id, $titre, $pays,$image, $auteur, $codePostale, $depart, $arrivee, $description, $ville);
+$modifier = $database->modifier($id, $titre, $pays, $image, $auteur, $codePostale, $depart, $arrivee, $description, $ville);
 
 header("location: afficherInfo.php?id=$id");
 

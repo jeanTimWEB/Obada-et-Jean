@@ -1,7 +1,7 @@
 <?php 
 
 // Import de la databse
-require_once("database.php");
+require_once "database.php";
 // Création de la connexion
 $database = new Database();
 // Récupérer l'id depuis l'url

@@ -1,50 +1,52 @@
 <?php 
 
-require_once('classPromenades.php');
+require_once 'classPromenades.php';
 
-    class Database{
+class Database
+{
 
-        //attributs
-        private $connexion;
+    //attributs
+    private $connexion;
        
-        //constructeur
-        public function __construct()
-            {
-                //le chemin vers le serveur
-                $PARAM_hote='mariadb'; // localhost
-                // le port de connection a al base de donnée
-                $PARAM_port='3306';
-                // le nom de ma base de donnée
-                $PARAM_nom_bd='Ballades';
-                // le nom de user pour se connecter
-                $PARAM_utilisateur='admin';
-                //mot de passse du user pour se connecter
-                $PARAM_mot_passe='admin1234';
+    //constructeur
+    public function __construct()
+    {
+            //le chemin vers le serveur
+            $PARAM_hote='mariadb'; // localhost
+            // le port de connection a al base de donnée
+            $PARAM_port='3306';
+            // le nom de ma base de donnée
+            $PARAM_nom_bd='Ballades';
+            // le nom de user pour se connecter
+            $PARAM_utilisateur='admin';
+            //mot de passse du user pour se connecter
+            $PARAM_mot_passe='admin1234';
     
-                try
-                {//le code qu'on essaye de faire 
-                   $this->connexion = new PDO(
-                                                'mysql:host='.$PARAM_hote.';dbname='.$PARAM_nom_bd.';charset=utf8',
-                                                 $PARAM_utilisateur,
-                                                 $PARAM_mot_passe
-                                              );                      
-                } // si il échoue 
-                catch(Exception $e)
-                {
-                    echo 'Erreur: '.$e->getMessage().'<br/>';
-                    echo 'Code '.$e->getCode();
-                }
+        try
+            {//le code qu'on essaye de faire 
+            $this->connexion = new PDO(
+                'mysql:host='.$PARAM_hote.';dbname='.$PARAM_nom_bd.';charset=utf8',
+                $PARAM_utilisateur,
+                $PARAM_mot_passe
+            );                      
+        } // si il échoue 
+        catch(Exception $e)
+            {
+            echo 'Erreur: '.$e->getMessage().'<br/>';
+            echo 'Code '.$e->getCode();
+        }
     
                 
-            }
-        //methodes - comportement
+    }
+    //methodes - comportement
     //methodes - comportement
     public function getConnexion()
     {
         return $this->connexion;
     }
     // Fonction qui récupère une promenade en fonction de son id
-    public function getPromenade($id){
+    public function getPromenade($id)
+    {
         // Je prépare ma requete
         $pdoStatement = $this->connexion->prepare(
             'SELECT id, titre, pays,image, auteur, codePostale, depart, arrivee, description, ville
@@ -59,12 +61,13 @@ require_once('classPromenades.php');
 
         // Je recupere et je stocke le resultat
         $maPromenade = $pdoStatement->fetchObject("Promenades");
-       //var_dump($maPromenade);
+        //var_dump($maPromenade);
         return $maPromenade;
     }
 
 
-    public function getAllPromenades(){
+    public function getAllPromenades()
+    {
 
         $pdoStatement = $this->connexion->prepare(
             'SELECT * FROM `Promenades`; '
@@ -74,21 +77,23 @@ require_once('classPromenades.php');
 
 
         // Je recupere et je stocke le resultat
-        $allPromenade = $pdoStatement->fetchAll( PDO::FETCH_CLASS,'Promenades');
-       //var_dump($maPromenade);
+        $allPromenade = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Promenades');
+        //var_dump($maPromenade);
         return $allPromenade;
       
 
     }
 
-    public function ajouter( $titre, $pays, $image, $auteur, $codePostale, $depart, $arrivee, $description, $ville){
+    public function ajouter( $titre, $pays, $image, $auteur, $codePostale, $depart, $arrivee, $description, $ville)
+    {
 
         $pdoStatement = $this->connexion->prepare(
             "INSERT INTO Promenades(titre, pays, image, auteur, codePostale, depart, arrivee, description, ville)
             VALUES(:titre, :pays, :image, :auteur, :codePostale, :depart, :arrivee, :description, :ville);"
         );
 
-        $pdoStatement->execute(array(
+        $pdoStatement->execute(
+            array(
             "titre" =>$titre,
             "pays" =>$pays,
             "auteur" =>$auteur,
@@ -99,15 +104,17 @@ require_once('classPromenades.php');
             "image"=>$image,
             "ville" =>$ville
             
-        ));
+            )
+        );
 
         $id = $this->connexion->lastInsertId();
         return $id;
 
     }
 
-//--------------------------------------------------------------------
-    public function modifier($id, $titre, $pays,$image, $auteur, $codePostale, $depart, $arrivee, $description, $ville){
+    //--------------------------------------------------------------------
+    public function modifier($id, $titre, $pays,$image, $auteur, $codePostale, $depart, $arrivee, $description, $ville)
+    {
 
         $pdoStatement = $this->connexion->prepare(
             "UPDATE Promenades
@@ -122,9 +129,11 @@ require_once('classPromenades.php');
             description = :description,
             ville = :ville
             
-            where id = :id;");    
+            where id = :id;"
+        );    
 
-        $pdoStatement->execute([
+        $pdoStatement->execute(
+            [
             'titre' => $titre,
             'pays' => $pays,
             'image' => $image,
@@ -135,14 +144,15 @@ require_once('classPromenades.php');
             'description' => $description,
             'ville' => $ville,
             'id' => $id
-        ]);  
+            ]
+        );  
         
 
     }
 
-//--------------------------------------------------------------------
+    //--------------------------------------------------------------------
 
         
-    }//fin database
+}//fin database
 
 ?>
