@@ -6,8 +6,8 @@ $database = new Database();
 
 $allpromenades = $database->getAllPromenades();
 
-//$id = $_GET['id'];
-$id = 1;
+$id = $_GET['id'];
+
 
 $promenade = $database->getPromenade($id);
 

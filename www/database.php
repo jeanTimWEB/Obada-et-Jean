@@ -81,10 +81,11 @@ require_once('classPromenades.php');
 
     }
 
-    public function ajouter( $titre, $pays,$image, $auteur, $codePostale, $depart, $arrivee, $description, $ville){
+    public function ajouter( $titre, $pays, $image, $auteur, $codePostale, $depart, $arrivee, $description, $ville){
 
         $pdoStatement = $this->connexion->prepare(
-            "INSERT INTO Promenades(titre, pays,image, auteur, codePostale, depart, arrivee, description, ville) VALUES(:titre, :pays, :image, :auteur, :codePostale, :depart, :arrivee, :description, :ville);"
+            "INSERT INTO Promenades(titre, pays, image, auteur, codePostale, depart, arrivee, description, ville)
+            VALUES(:titre, :pays, :image, :auteur, :codePostale, :depart, :arrivee, :description, :ville);"
         );
 
         $pdoStatement->execute(array(
@@ -95,6 +96,7 @@ require_once('classPromenades.php');
             "depart" =>$depart,
             "arrivee" =>$arrivee,
             "description" =>$description,
+            "image"=>$image,
             "ville" =>$ville
             
         ));

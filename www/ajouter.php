@@ -97,6 +97,10 @@
 
                     <input type="text" name="arrivee"> <br>
 
+                    Image: <br>
+
+                    <input type="text" name="image"> <br>
+
                     Auteur: <br>
 
                     <input type="text" name="auteur"> <br>
