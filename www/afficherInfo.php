@@ -56,15 +56,15 @@ $promenade = $database->getPromenade(1);
 
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
                 
-                    <li class="nav-item active">
+                    <li class="nav-item">
 
-                        <a class="nav-link " href="#">Index </a>
+                        <a class="nav-link " href="index.php">Index </a>
 
                     </li>
 
                     <li class="nav-item">
 
-                        <a class="nav-link" href="#">Ajouter</a>
+                        <a class="nav-link" href="ajouter.php">Ajouter</a>
 
                     </li>
 
@@ -94,12 +94,12 @@ $promenade = $database->getPromenade(1);
 
                     <h1><?php echo $promenade->getTitre();?></h1>
 
-                    <h2><?php echo $promenade->getPays();?></h2>
-                    <h2><?php echo $promenade->getVille();?></h2>
-                    <h2><?php echo $promenade->getCP();?></h2>
-                    <h2><?php echo $promenade->getDepart();?></h2>
-                    <h2><?php echo $promenade->getArrivee();?></h2>
-                    <h2><?php echo $promenade->getAuteur();?></h2> 
+                    <h2>Pays: <?php echo $promenade->getPays();?></h2>
+                    <h2>Ville: <?php echo $promenade->getVille();?></h2>
+                    <h2>Code Postal: <?php echo $promenade->getCP();?></h2>
+                    <h2>Lieu de Depart: <?php echo $promenade->getDepart();?></h2>
+                    <h2>Lieu d'arrivée: <?php echo $promenade->getArrivee();?></h2>
+                    <h2>Auteur: <?php echo $promenade->getAuteur();?></h2> 
 
                 </div>
 
@@ -107,7 +107,7 @@ $promenade = $database->getPromenade(1);
 
                     <h1>Descripton: </h1>
 
-                    <p class=""> 
+                    <p> 
                     
                     <?php echo $promenade->getDescription();?>
                     

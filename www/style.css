@@ -113,23 +113,34 @@ a div{
 
 .promnadeInfo h1{
 
-  color: red;
-  font-size: 1.5vw;
-
+  color: rgb(167, 37, 37);
+  font-size: 50px;
+  font-weight: 700;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 5%;
 }
 
 .promnadeInfo h2{
 
-  color: red;
-  font-size: 1vw;
+  color: rgb(61, 221, 88);
+  font-size: 25px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 5%;
 
 }
 
 .promnadeInfo p{
 
-  color: red;
-  font-size: 1.5vw;
+  color: rgb(72, 50, 195);
+  font-size: 40px;
   text-align: center;
-  box-shadow: 5px 10px black;
-  opacity: 0.75;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 5%;
+
 }
+

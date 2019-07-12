@@ -66,13 +66,13 @@ $description= $promenade->getDescription();
 
                         <li class="nav-item active">
 
-                            <a class="nav-link " href="#">Index </a>
+                            <a class="nav-link " href="index.php">Index </a>
 
                         </li>
 
                         <li class="nav-item">
 
-                            <a class="nav-link" href="#">Ajouter</a>
+                            <a class="nav-link" href="ajouter.php">Ajouter</a>
 
                         </li>
 
@@ -245,6 +245,10 @@ $description= $promenade->getDescription();
                     </li>
                 </ul>
                 <!-- Call to action -->
+
+            </div>
+            
+        </div>
 
     </footer>
     <!-- Footer -->

@@ -8,8 +8,8 @@ class Promenades{
     private $image;
     private $auteur;
     private $codePostale;
-    private $lieuDepart;
-    private $lieuArrivee;
+    private $depart;
+    private $arrivee;
     private $description;
     private $ville;
 
@@ -27,9 +27,9 @@ class Promenades{
 
     public function getCP(){return $this->codePostale;}
 
-    public function getDepart(){return $this->lieuDepart;}
+    public function getDepart(){return $this->depart;}
 
-    public function getArrivee(){return $this->lieuArrivee;}
+    public function getArrivee(){return $this->arrivee;}
     
     public function getDescription(){return $this->description;}
 
