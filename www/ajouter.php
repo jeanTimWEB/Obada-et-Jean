@@ -71,7 +71,7 @@
 
             <div class="row">
 
-                <div class="offset-3 col-3">
+                <div class="offset-lg-3 col-lg-3 col-sm-12">
 
                     Titre: <br>
 
@@ -107,7 +107,7 @@
 
                 </div>
 
-                <div class="col-4">
+                <div class="col-lg-4 col-xs-12 ">
 
                     Descripition: <br>
 
@@ -124,7 +124,7 @@
         <footer>
             <!--Jean-->
 
-            <div class="container-fluid fixed-bottom bg-light ">
+            <div class="container-fluid fixed-bottom bg-light d-none d-md-block">
 
                 <!-- Grid row -->
                 <div class="row justify-content-around align-items-center">
