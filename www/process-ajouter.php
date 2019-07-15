@@ -4,6 +4,7 @@ require_once "database.php";
 $database = new Database();
 
 $image = $_FILES["image"];
+//var_dump($_FILES);
 
 $imageName = $image['name'];
 $imageTmpName = $image['tmp_name'];

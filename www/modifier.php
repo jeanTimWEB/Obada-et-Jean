@@ -77,44 +77,53 @@ require_once "database.php";
     <h2>Modifier une Promenade</h2>
 
     <section class="container-fluid">
+
+
+
+                <form action="process-modifier.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
         <div class="row justify-content-around">
             <div class="col-lg-3 offset-1">
 
 
-                <form action="process-modifier.php?id=<?php echo $id ?>" method="post">
                     <br>
-                    <label for="titre">titre: </label>
+                    <label for="titre">titre: </label><br>
                     <input type="text" name="titre" value="<?php echo $promenade->getTitre()?>">
 
-                    <br> <br>
-                    <label for="pays">pays: </label>
+                    <br> 
+                    <label for="pays">pays: </label><br>
                     <input type="text" name="pays" value="<?php echo $promenade->getPays()?>"> <br>
 
-                    <br>
-                    <label for="ville">ville: </label>
+                    
+                    <label for="ville">ville: </label><br>
                     <input type="text" name="ville" value="<?php echo $promenade->getVille()?>"> <br>
 
-                    <br>
-                    <label for="codePostale">codePostale: </label>
+                  
+                    <label for="codePostale">codePostale: </label><br>
                     <input type="number" name="codePostale" value="<?php echo $promenade->getCP()?>"> <br>
 
-                    <br>
-                    <label for="depart">depart: </label>
+                   
+                    <label for="depart">depart: </label><br>
                     <input type="text" name="depart" value="<?php echo $promenade->getDepart()?>"> <br>
 
-                    <br>
-                    <label for="arrivee">arrivee: </label>
+                  
+                    <label for="arrivee">arrivee: </label><br>
                     <input type="text" name="arrivee" value="<?php echo $promenade->getArrivee()?>"> <br>
 
-                    <br>
-                    <label for="auteur">auteur: </label>
+                  
+                    <label for="auteur">auteur: </label><br>
                     <input type="text" name="auteur" value="<?php echo $promenade->getAuteur()?>"> <br>
 
-                    <br>
+               
 
-                    <label for="image">image: </label>
-                    <input type="text" name="image" value="<?php echo $promenade->getImage()?>"> <br><br>
+       
+                   
+                    <label for="image">image: </label><br>
+                    <input type="file" name="image" > <br><br>
+                            
+
+
             </div>
+        
             <div class="col-6 offset-1">
 <br><br><br><br>
                 <label for="description">description: </label>
@@ -122,14 +131,15 @@ require_once "database.php";
                     value="<?php echo $promenade->getDescription()?>"> </textarea> <br>
 
 
-                <br>
+                
 
 
                 <input type="submit">
-
-                </form>
             </div>
         </div>
+                </form>
+              
+      
     </section>
     <footer>
             <!--Jean-->
