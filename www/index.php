@@ -79,9 +79,9 @@ $description= $promenade->getDescription();
 
                 </ul>
 
-                <form class="form-inline my-2 my-lg-0" action = "verif-form.php" method = "get">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" name="terme">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name = "s" value = "Rechercher">Search</button>
+                <form class="form-inline my-2 my-lg-0" action="verif-form.php" method="get">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" name="mot">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
 
             </div>

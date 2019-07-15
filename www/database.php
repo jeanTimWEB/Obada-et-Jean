@@ -153,6 +153,32 @@ class Database
     //--------------------------------------------------------------------
 
         
+    public function search($mot){
+
+        $mot = "%" . $mot . "%";
+
+        $pdoStatement = $this->connexion->prepare(
+            "SELECT * FROM Promenades 
+            WHERE titre LIKE :titre
+            OR pays LIKE :pays
+            OR ville LIKE :ville
+            OR auteur LIKE :auteur"
+        );
+
+        $pdoStatement->execute([
+            'titre'  => $mot,
+            'pays'   => $mot,
+            'ville'  => $mot,
+            'auteur' => $mot
+        ]);
+
+        // Je recupere et je stocke le resultat
+        $allPromenades = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Promenades');
+        //var_dump($maPromenade);
+        return $allPromenades;
+
+
+    }
 }//fin database
 
 ?>
