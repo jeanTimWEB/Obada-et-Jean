@@ -7,7 +7,7 @@ $database = new Database();
 $id = $_GET['id'];
 $titre = $_POST ['titre'];
 $pays = $_POST ['pays'];
-$image = $_POST ['image'];
+
 $auteur = $_POST ['auteur'];
 $codePostale = $_POST ['codePostale'];
 $depart= $_POST ['depart'];
@@ -16,6 +16,7 @@ $description = $_POST ['description'];
 $ville = $_POST ['ville'];
 
 $image = $_FILES["image"];
+
 
 $imageName = $image['name'];
 $imageTmpName = $image['tmp_name'];
