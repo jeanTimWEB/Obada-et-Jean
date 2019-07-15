@@ -108,44 +108,7 @@ a div{
 }
 
 .pics{
-  min-width: 100px;;
-}
-
-.promnadeInfo h1{
-
-  color: rgb(167, 37, 37);
-  font-size: 50px;
-  font-weight: 700;
-  background-color: black;
-  opacity: 0.7;
-  border-radius: 5%;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-.promnadeInfo h2{
-
-  color: rgb(61, 221, 88);
-  font-size: 25px;
-  font-weight: 400;
-  background-color: black;
-  opacity: 0.7;
-  border-radius: 5%;
-
-  font-family: Georgia, 'Times New Roman', Times, serif;
-
-}
-
-.promnadeInfo p{
-
-  color: rgb(72, 50, 195);
-  font-size: 40px;
-  text-align: center;
-  font-weight: 400;
-  background-color: black;
-  opacity: 0.7;
-  border-radius: 5%;
-
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  min-width: 100px;
 }
 
 .modif{
@@ -159,5 +122,19 @@ input{
   background-color:black;
   color:rgba(255, 255, 255, 0.712);
 
+
+}
+
+.info-carte{
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  font-weight: 700;
+
+}
+
+.info-description{
+
+  font-style: italic;
 
 }

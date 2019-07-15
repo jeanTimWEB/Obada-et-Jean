@@ -28,7 +28,7 @@ $promenade = $database->getPromenade($id);
 
         <style>
         
-        .promnadeInfo{
+        .promenadeInfo{
 
             background-image:url("<?php echo $promenade->getImage();?>");
             background-repeat: no-repeat;
@@ -87,13 +87,13 @@ $promenade = $database->getPromenade($id);
         </nav>
 
         
-        <div class="container-fluid promnadeInfo">
+        <div class="container-fluid promenadeInfo">
 
             <div class="row d-flex justify-content-sm-center">
 
-                <div class="card offset-lg-1 mt-5 col-xl-4 col-xs-12 mesCartes ">
+                <div class="card offset-lg-1 mt-5 col-xl-4 col-xs-12">
 
-                    <div class="card-header">
+                    <div class="card-header info-carte">
 
                         <?php echo $promenade->getTitre();?>
 
@@ -112,15 +112,15 @@ $promenade = $database->getPromenade($id);
 
                 </div>
 
-                <div class="card offset-lg-1 mt-5 col-xl-5 col-xs-12 mesCartes" >
+                <div class="card offset-lg-1 mt-5 col-xl-5 col-xs-12" >
 
-                    <div class="card-header">
+                    <div class="card-header info-carte">
 
-                        Descripton: 
+                        Description: 
 
                     </div>
 
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush info-description">
 
                         <li class="list-group-item"><?php echo $promenade->getDescription();?></li>
 
