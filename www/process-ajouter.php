@@ -19,7 +19,7 @@ $allowed = array('jpg', 'jpeg', 'png');
 if(in_array($imageActualExt, $allowed)) {
     if ($imageError === 0) {
 
-        if ($imageSize < 100000) {
+        if ($imageSize < 100000000) {
             $imageNameNew = uniqid('', true).".".$imageActualExt;
 
             $imageDestination = 'uploads/' .$imageNameNew;
