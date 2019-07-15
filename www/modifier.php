@@ -81,11 +81,9 @@ require_once "database.php";
 
 
                 <form action="process-modifier.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
-        <div class="row justify-content-around">
-            <div class="col-lg-3 offset-1">
-
-
-                    <br>
+        <div class="row justify-content-around ">
+            <div class="col-lg-6 col-xs-12">
+                                    <br>
                     <label for="titre">titre: </label><br>
                     <input type="text" name="titre" value="<?php echo $promenade->getTitre()?>">
 
@@ -124,11 +122,11 @@ require_once "database.php";
 
             </div>
         
-            <div class="col-6 offset-1">
-<br><br><br><br>
+            <div class="col-md-6">
+<br><br>
                 <label for="description">description: </label>
-                <textarea rows="10" cols="50" type="text" name="description" maxlength="300"
-                    value="<?php echo $promenade->getDescription()?>"> </textarea> <br>
+                <textarea rows="10" cols="35" type="text" name="description" maxlength="300"> 
+                    <?php echo $promenade->getDescription()?></textarea> <br>
 
 
                 
@@ -144,7 +142,7 @@ require_once "database.php";
     <footer>
             <!--Jean-->
     
-            <div class="container-fluid fixed-bottom bg-light">
+            <div class="container-fluid fixed-bottom bg-light d-none d-md-block">
     
                 <!-- Grid row -->
                 <div class="row justify-content-around align-items-center">
