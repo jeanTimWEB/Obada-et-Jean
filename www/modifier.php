@@ -77,11 +77,14 @@ require_once "database.php";
     <h2>Modifier une Promenade</h2>
 
     <section class="container-fluid">
+
+
+
+                <form action="process-modifier.php?id=<?php echo $id ?>" method="post">
         <div class="row justify-content-around">
             <div class="col-lg-3 offset-1">
 
 
-                <form action="process-modifier.php?id=<?php echo $id ?>" method="post">
                     <br>
                     <label for="titre">titre: </label>
                     <input type="text" name="titre" value="<?php echo $promenade->getTitre()?>">
@@ -112,9 +115,15 @@ require_once "database.php";
 
                     <br>
 
+       
+                   
                     <label for="image">image: </label>
-                    <input type="text" name="image" value="<?php echo $promenade->getImage()?>"> <br><br>
+                    <input type="file" name="image" value="<?php echo $promenade->getImage()?>"> <br><br>
+                            
+
+
             </div>
+        
             <div class="col-6 offset-1">
 <br><br><br><br>
                 <label for="description">description: </label>
@@ -126,10 +135,11 @@ require_once "database.php";
 
 
                 <input type="submit">
-
-                </form>
             </div>
         </div>
+                </form>
+              
+      
     </section>
     <footer>
             <!--Jean-->
