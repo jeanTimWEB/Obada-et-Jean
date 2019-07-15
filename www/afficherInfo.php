@@ -89,32 +89,42 @@ $promenade = $database->getPromenade($id);
         
         <div class="container-fluid promnadeInfo">
 
-            <div class="row">
+            <div class="row d-flex justify-content-sm-center">
 
-                <div class="offset-2 place col-3 mt-5">
+                <div class="card offset-lg-1 mt-5 col-xl-4 col-xs-12 mesCartes ">
 
-                    <h1><?php echo $promenade->getTitre();?></h1>
+                    <div class="card-header">
 
-                    <h2>Pays: <?php echo $promenade->getPays();?></h2>
-                    <h2>Ville: <?php echo $promenade->getVille();?></h2>
-                    <h2>Code Postal: <?php echo $promenade->getCP();?></h2>
-                    <h2>Lieu de Depart: <?php echo $promenade->getDepart();?></h2>
-                    <h2>Lieu d'arrivée: <?php echo $promenade->getArrivee();?></h2>
-                    <h2>Auteur: <?php echo $promenade->getAuteur();?></h2> 
+                        <?php echo $promenade->getTitre();?>
+
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">Pays: <?php echo $promenade->getPays();?></li>
+                        <li class="list-group-item">Ville: <?php echo $promenade->getVille();?></li>
+                        <li class="list-group-item">Code Postal: <?php echo $promenade->getCP();?></li>
+                        <li class="list-group-item">Lieu de Depart: <?php echo $promenade->getDepart();?></li>
+                        <li class="list-group-item">Lieu d'arrivée: <?php echo $promenade->getArrivee();?></li>
+                        <li class="list-group-item">Auteur: <?php echo $promenade->getAuteur();?></li>
+                        
+                    </ul>
 
                 </div>
 
-                <div class="offset-1 col-5 mt-5">
+                <div class="card offset-lg-1 mt-5 col-xl-5 col-xs-12 mesCartes" >
 
-                    <h1>Descripton: </h1>
+                    <div class="card-header">
 
-                    <p> 
-                    
-                    <?php echo $promenade->getDescription();?>
-                    
-                    </p>
+                        Descripton: 
 
-                    
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item"><?php echo $promenade->getDescription();?></li>
+
+                    </ul>
 
                 </div>
 
@@ -126,7 +136,7 @@ $promenade = $database->getPromenade($id);
         <footer>
             <!--Jean-->
         
-            <div class="container-fluid fixed-bottom bg-light ">
+            <div class="container-fluid fixed-bottom bg-light d-none d-sm-block">
         
                 <!-- Grid row -->
                 <div class="row justify-content-around align-items-center">
