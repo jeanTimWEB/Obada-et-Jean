@@ -1,6 +1,7 @@
 <?php 
 
 require_once 'classPromenades.php';
+require_once 'classUser.php';
 
 class Database
 {
@@ -179,6 +180,57 @@ class Database
 
 
     }
+
+
+
+    public function insertUser($nom, $prenom, $email, $username, $password){
+
+        $pdoStatement = $this->connexion->prepare(
+            "INSERT into users(nom,prenom,email,username,password)
+            VALUES (:nom,:prenom,:email,:username,:password);"
+        );
+        $pdoStatement->execute([
+            "nom" => $nom ,
+            "prenom" => $prenom ,
+            "email" => $email,
+            "username" => $username ,
+            "password" => $password 
+                    ]);
+
+    }
+
+//
+/*
+    public function loginUser(){
+
+$pdoStatement = $this->connexion->prepare("SELECT * FROM users WHERE username = 'Obada';");
+$pdoStatement->execute();
+
+    }
+*/
+
+
+
+    public function getPasswordAndId($username){
+
+       $pdoStatement = $this->connexion->prepare(
+
+            "SELECT password, id FROM users WHERE username =:username;"
+          
+        );
+        $pdoStatement->execute([
+            'username' => $username
+        ]);
+
+
+     $resultat = $pdoStatement->fetchObject('User');
+
+     return $resultat;
+
+    }
+
+
+
 }//fin database
 
 ?>

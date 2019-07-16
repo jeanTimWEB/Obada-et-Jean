@@ -39,7 +39,7 @@ $description= $promenade->getDescription();
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
-
+    <script src="https://kit.fontawesome.com/bf302c0b12.js"></script>
 
 
 
@@ -149,18 +149,18 @@ $description= $promenade->getDescription();
                 <!-- Social buttons -->
                 <ul class="list-unstyled list-inline txt-center">
                     <li class="list-inline-item">
-                        <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/"><img
-                            class="icon"       src="assets/icon-FB.png" alt="" width="50">
+                        <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/">
+                        <i class="fab fa-facebook"></i>                  
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a class="btn-floating btn-tw mx-1" href="https://twitter.com">
-                            <img class="icon" src="assets/icon-Twitter.png" alt="" width="50">
+                        <i class="fab fa-linkedin"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a class="btn-floating btn-gplus mx-1" href="https://www.youtube.com/?hl=FR">
-                            <img class="icon" src="assets/icon-YT.png" alt="" width="50">
+                        <i class="fab fa-twitter"></i>
                         </a>
                     </li>
 

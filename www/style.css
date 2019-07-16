@@ -121,8 +121,6 @@ input{
 .mesCartes{
   background-color:black;
   color:rgba(255, 255, 255, 0.712);
-
-
 }
 
 .info-carte{
@@ -137,4 +135,8 @@ input{
 
   font-style: italic;
 
+}
+i{
+  font-size:3rem;
+  color:black;
 }

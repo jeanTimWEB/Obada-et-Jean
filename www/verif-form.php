@@ -73,7 +73,7 @@ $search = $database->search($mot);
             </div>
 
         </nav>
-
+<section class="row justify-content-around">
         <?php 
 
 
@@ -100,7 +100,7 @@ $search = $database->search($mot);
 
             };
         ?>
-
+</section>
 
         <footer>
             <!--Jean-->

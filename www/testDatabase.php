@@ -26,6 +26,28 @@ else
     //mot de passse du user pour se connecter
     $PARAM_mot_passe='Annu@ireT0ut0u';</h2><br>";*/ echo "INDEED!! ";
 }
+$entree = 'sandra';
+$passEntree = 'sandra1234';
 
-$database->modifier(1, 'lkjs', 'drfg', '', 'tr', 1220, 'dfgg', 'dfgfg', 'trztz', 'dfhh');
+$pass = $database->getPasswordAndId($entree);
+
+if ($pass == null){
+
+    echo "Le username n'est pas correct";
+    
+}
+else{
+    echo "les username est reconnu avec succes";
+    $password=$pass->getPassword();
+
+    if (password_verify($passEntree,$password)){
+    echo "Connexion reussie";
+    }
+    else{echo "le password n'est pas correct.";}
+    
+}
+//var_dump ("$pass");
+
+// insertUser($nom, $prenom, $email, $username, $password)
+//$database->insertUser('Vouillamoz','Jean','jeantim@gmail.com','jeantim','jeantimtim');
 ?>

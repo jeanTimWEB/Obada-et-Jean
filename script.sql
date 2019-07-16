@@ -27,3 +27,21 @@ ADD ville VARCHAR (255);
 
 SELECT * FROM `Promenades`; 
 
+---------------------------------------------------
+create TABLE users(
+id INT PRIMARY KEY AUTO_INCREMENT,
+nom VARCHAR (255),
+prenom VARCHAR (255), 
+email VARCHAR (255), 
+username VARCHAR (255), 
+password VARCHAR (255));  
+    -------------------------------------------------
+    INSERT into users(nom,prenom,email,username,password)VALUES ('Alsaid','Obada','obada@gmail.com','Obada','obada1234');
+
+    ---------------------------
+
+  select * from users WHERE username = 'Obada';
+
+  --------------------------------------------------
+  
+    
