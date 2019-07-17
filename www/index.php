@@ -170,7 +170,7 @@
 
                     <!-- Content -->
                     <h5>WebMasters</h5>
-                    <p>Projet réalisé par Obada et Jean en classe digitale 2019 à Réalise</p>
+                    <p>Projet réalisé par Obada et Jean en classe digitale 2019 à <a href="https://www.realise.ch/fr/home-page">Réalise</a> </p>
 
                 </div>
 

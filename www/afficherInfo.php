@@ -35,6 +35,14 @@ $promenade = $database->getPromenade($id);
             background-size: cover;
             min-height: 750px;
         }
+        
+        .hide{
+            <?php 
+
+            if($_SESSION['logged'] === true){echo "display: block;"; }            
+            else{ echo "display: none;"; }
+            ?>
+        }     
 
         </style>
 
@@ -65,13 +73,13 @@ $promenade = $database->getPromenade($id);
 
                     <li class="nav-item">
 
-                        <a class="nav-link" href="ajouter.php">Ajouter</a>
+                        <a class="nav-link hide" href="ajouter.php">Ajouter</a>
 
                     </li>
 
                     <li class="nav-item">
 
-                        <a class="nav-link" href="modifier.php?id=<?php echo $id ;?>">Modifier</a>
+                        <a class="nav-link hide" href="modifier.php?id=<?php echo $id ;?>">Modifier</a>
 
                     </li>
 

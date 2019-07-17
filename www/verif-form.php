@@ -25,7 +25,7 @@ $search = $database->search($mot);
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>Hello, world!</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-
+        <script src="https://kit.fontawesome.com/bf302c0b12.js"></script>
     </head>
 
     <body>
@@ -102,60 +102,60 @@ $search = $database->search($mot);
         ?>
 </section>
 
-        <footer>
-            <!--Jean-->
-        
-            <div class="container-fluid fixed-bottom bg-light d-none d-sm-block">
-        
-                <!-- Grid row -->
-                <div class="row justify-content-around align-items-center">
-    
-                    <!-- Grid column -->
-                    <div class="col-md-2 ">
-    
-                        <!-- Content -->
-                        <h5>WebMasters</h5>
-                        <p>Projet réalisé par Obada et Jean en classe digitale 2019 à Réalise</p>
-    
-                    </div>
-    
-                    <!-- Social buttons -->
-                    <ul class="list-unstyled list-inline text-center">
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/"><img
-                                    src="assets/icon-FB.png" alt="" width="50">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-tw mx-1" href="https://twitter.com">
-                                <img src="assets/icon-Twitter.png" alt="" width="50">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-gplus mx-1" href="https://www.youtube.com/?hl=FR">
-                                <img src="assets/icon-YT.png" alt="" width="50">
-                            </a>
-                        </li>
-    
-                    </ul>
-                    <!-- Social buttons -->
-    
-                    <!-- Call to action -->
-                    <ul class="list-unstyled">
-                        <li>
-                            <h5 class="mb-1">Besoin d'un site Web ? </h5>
-                        </li>
-                        <li>
-                            <a href="#!" class="btn btn-secondary btn-rounded">Demandez votre devis!</a>
-                        </li>
-                    </ul>
-                    <!-- Call to action -->
+<footer>
+        <!--Jean-->
+
+        <div class="container-fluid fixed-bottom bg-light">
+
+            <!-- Grid row -->
+            <div class="row justify-content-around align-items-center">
+
+                <!-- Grid column -->
+                <div class="col-md-2 ">
+
+                    <!-- Content -->
+                    <h5>WebMasters</h5>
+                    <p>Projet réalisé par Obada et Jean en classe digitale 2019 à Réalise</p>
 
                 </div>
 
+                <!-- Social buttons -->
+                <ul class="list-unstyled list-inline txt-center">
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/">
+                        <i class="fab fa-facebook"></i>                  
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-tw mx-1" href="https://twitter.com">
+                        <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-gplus mx-1" href="https://www.youtube.com/?hl=FR">
+                        <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+
+                </ul>
+                <!-- Social buttons -->
+
+                <!-- Call to action -->
+                <ul class="list-unstyled">
+                    <li>
+                        <h5 class="mb-1">Besoin d'un site Web ? </h5>
+                    </li>
+                    <li>
+                        <a href="#!" class="btn btn-secondary btn-rounded">Demandez votre devis!</a>
+                    </li>
+                </ul>
+                <!-- Call to action -->
+
             </div>
-        
-        </footer>
+
+        </div>
+
+    </footer>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
