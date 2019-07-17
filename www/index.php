@@ -41,6 +41,26 @@ $description= $promenade->getDescription();
     <meta charset="utf-8">
     <script src="https://kit.fontawesome.com/bf302c0b12.js"></script>
 
+    <style>
+    .hiddenBouton{
+
+       <?php  
+       
+       if  ($_SESSION['logged'] = true){
+
+        echo "display: block;";
+
+       }
+
+       else{
+
+        echo "display: none;";
+       }
+       
+       ?> 
+
+    }
+    </style>
 
 
 </head>
@@ -72,7 +92,7 @@ $description= $promenade->getDescription();
 
                     <li class="nav-item">
 
-                        <a class="nav-link" href="ajouter.php">Ajouter</a>
+                        <a class="nav-link hiddenBouton" href="ajouter.php">Ajouter</a>
 
                     </li>
 

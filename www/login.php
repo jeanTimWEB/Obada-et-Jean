@@ -1,15 +1,11 @@
 <?php 
-
-$faux = $_GET['faux']
-
-
-
+$faux = $_GET['faux'];
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-
+<title>authentification</title>
     </head>
     <body>
 
@@ -22,6 +18,7 @@ $faux = $_GET['faux']
             }
 
         ?>
+        <!--creation du formulaire de login avec bouton valider--->
         <form action="process-login.php" method="post">
             <input type="text" name="username" placeholder="username">
             <input type="password" name="passTemp" placeholder="password">

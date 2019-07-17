@@ -1,24 +1,6 @@
 <?php
-
-
-/*
-function falsePass(){
-    header('Location: login.php');
-    exit;
-}
-*/
-
-
-
 require_once "database.php";
-
-
-
-
 $database = new Database();
-
-
-
 
 $entree = $_POST['username'];
 $passEntree = $_POST['passTemp'];
@@ -27,7 +9,6 @@ $pass = $database->getPasswordAndId($entree);
 
 if ($pass == null){
 
-   // echo "Le username n'est pas correct";
     
 }
 else{

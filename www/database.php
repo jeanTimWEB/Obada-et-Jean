@@ -211,6 +211,7 @@ $pdoStatement->execute();
 
 
 
+
     public function getPasswordAndId($username){
 
        $pdoStatement = $this->connexion->prepare(
