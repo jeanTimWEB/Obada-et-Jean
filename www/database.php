@@ -230,6 +230,25 @@ $pdoStatement->execute();
 
     }
 
+    public function getUser($id){
+
+        $pdoStatement = $this->connexion->prepare(
+
+            "SELECT * FROM users WHERE id =:id;"
+          
+        );
+
+        $pdoStatement->execute([
+            'id' => $id
+        ]);
+
+        $user = $pdoStatement->fetchObject('User');
+
+        return $user;
+
+
+    }
+
 
 
 }//fin database
