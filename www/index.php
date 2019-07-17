@@ -6,22 +6,15 @@ require_once "database.php";
 $database = new Database();
 // Récupérer l'id depuis l'url
 
-$promenade =$database->getAllPromenades()
-//$promenade = $database->getPromenade(1);
+$promenade =$database->getAllPromenades();
 
-//var_dump($promenade);
-/*
-$titre = $promenade->getTitre();
-$pays = $promenade->getPays();
-$image = $promenade->getImage();
-$ville = $promenade->getVille();
-$auteur = $promenade->getAuteur();
-$CP = $promenade->getCP();
-$depart = $promenade->getDepart();
-$arrivee = $promenade->getArrivee();
-$description= $promenade->getDescription();
 
-*/
+session_start();
+
+$id = $_SESSION['id'];
+$user = $database->getUser($id);
+
+
 
 ?>
 
@@ -42,6 +35,44 @@ $description= $promenade->getDescription();
     <script src="https://kit.fontawesome.com/bf302c0b12.js"></script>
 
 
+    <style>
+
+    .hide{
+
+        <?php 
+        
+        if($_SESSION['logged'] === true){
+
+            echo "display: block;";
+        }else{
+
+            echo "display: none;";
+
+        }
+
+        ?>
+
+    }
+
+    .hide2{
+
+        <?php 
+        
+        if($_SESSION['logged'] === true){
+
+            echo "display: none;";
+        }else{
+
+            echo "display: block;";
+
+        }
+
+        ?>
+
+
+    }
+
+    </style>
 
 </head>
 
@@ -70,9 +101,28 @@ $description= $promenade->getDescription();
 
                     </li>
 
+                    <li class="nav-item active">
+
+                        <a class="nav-link hide2" href="login.php">Login </a>
+
+                    </li>
+
                     <li class="nav-item">
 
-                        <a class="nav-link" href="ajouter.php">Ajouter</a>
+                        <a class="nav-link hide" href="ajouter.php">Ajouter</a>
+
+                    </li>
+
+                    <li class="nav-item hide">
+
+                        <a href=""  class="nav-link hide" >bonjour <?php if($_SESSION['logged'] === true){echo $user->getPrenom();}?></a> 
+
+                    </li>   
+
+                    
+                    <li class="nav-item">
+
+                        <a class="nav-link hide" href="process-deconnecter.php">Deconnecter</a>
 
                     </li>
 
@@ -91,29 +141,32 @@ $description= $promenade->getDescription();
 
 
     </header>
-<section class="container-fluid">
-<div class="row  justify-content-around">
+    <section class="container-fluid">
+    <div class="row  justify-content-around">
    
  
-    <?php                     foreach ($promenade as $ballade){
-                            echo"<div class='col-lg-4 col-xs-1'>";          
+    <?php                     
+    
+        foreach ($promenade as $ballade){
 
-                            echo "<div class='card  mb-5 mesCartes'>
-                            <a href='afficherInfo.php?id=".$ballade->getId()."'><img class='card-img-top' src='".$ballade->getImage()."' alt='Card image cap'></a>
-                            <div class='card-body'>                           
+            echo"<div class='col-lg-4 col-xs-1'>";          
 
-                            <h2 class='card-title'>".$ballade->getTitre()."</h2>
-                            <h4 class='card-title'>".$ballade->getPays()."</h4>
-                            <h5 class='card-title'>".$ballade->getVille()."</h5>
-                            <h6 class='card-title'>".$ballade->getAuteur()."</h6>
-                            <h6 class='card-title'>".$ballade->getCP()."</h6>
-                            <p class='card-text'>".$ballade->getDescription()."</p><br>
-                          
-                           
-                            </div>
-                            </div></div>"
-                            ;}                                          
-                                        ?>           
+            echo "<div class='card  mb-5 mesCartes'>
+            <a href='afficherInfo.php?id=".$ballade->getId()."'><img class='card-img-top' src='".$ballade->getImage()."' alt='Card image cap'></a>
+            <div class='card-body'>                           
+
+            <h2 class='card-title'>".$ballade->getTitre()."</h2>
+            <h4 class='card-title'>".$ballade->getPays()."</h4>
+            <h5 class='card-title'>".$ballade->getVille()."</h5>
+            <h6 class='card-title'>".$ballade->getAuteur()."</h6>
+            <h6 class='card-title'>".$ballade->getCP()."</h6>
+            <p class='card-text'>".$ballade->getDescription()."</p><br>
+            
+            
+            </div>
+            </div></div>"
+        ;}                                          
+    ?>           
 
 
             
