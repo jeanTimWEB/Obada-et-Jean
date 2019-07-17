@@ -1,21 +1,18 @@
 <?php 
+    // Import de la databse
+    require_once "database.php";
+    // Création de la connexion
+    $database = new Database();
 
-// Import de la databse
-require_once "database.php";
-// Création de la connexion
-$database = new Database();
-// Récupérer l'id depuis l'url
+    //récupère toute les info de toutes les ballades sur la BD
+    $promenade =$database->getAllPromenades();
 
-$promenade =$database->getAllPromenades();
+    // creer un cookies stocké dans le stockage de l'outil de développement F12
+    session_start();
 
-
-session_start();
-
-$id = $_SESSION['id'];
-$user = $database->getUser($id);
-
-
-
+    //$_SESSION[] est une variable de session qui est appelable depuis partout sur toute les page sans faire de require spécial
+    $id = $_SESSION['id'];
+    $user = $database->getUser($id);
 ?>
 
 
@@ -34,58 +31,37 @@ $user = $database->getUser($id);
     <meta charset="utf-8">
     <script src="https://kit.fontawesome.com/bf302c0b12.js"></script>
 
-    <style>
-    .hiddenBouton{
-
-    <style>
+    <style>    
+/*ici les class hide nous permmettent de cacher du contenu pour les users et utilisateurs authentifies*/
+/*ici PHP écrit le CSS !! */
+   
 
     .hide{
+            <?php 
 
-        <?php 
-        
-        if($_SESSION['logged'] === true){
-
-            echo "display: block;";
-        }else{
-
-            echo "display: none;";
-
-        }
-
-        ?>
-
-    }
+            if($_SESSION['logged'] === true){echo "display: block;"; }            
+            else{ echo "display: none;"; }
+            ?>
+        }      
 
     .hide2{
 
-        <?php 
-        
-        if($_SESSION['logged'] === true){
-
-            echo "display: none;";
-        }else{
-
-            echo "display: block;";
-
+            <?php 
+            
+            if($_SESSION['logged'] === true){echo "display: none;"; }            
+            else{echo "display: block;";  }     
+            ?>
         }
-
-        ?>
-
-
-    }
-
     </style>
 
 </head>
 
 <body>
     <header>
-        
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
+            <!---LOGO--->
             <img class="pics" src="assets/baby-feet-icon-4.png" width="50" height="50" alt="feet-icon">
-
+            <!---HAMBURGER MENU TOOGLE--->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -109,11 +85,21 @@ $user = $database->getUser($id);
 
                     </li>
 
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link hide2" href="inscription.php">SignUp</a>
+
+                    </li>
+
                     <li class="nav-item">
 
                         <a class="nav-link hide" href="ajouter.php">Ajouter</a>
 
                     </li>
+
+
 
                     <li class="nav-item hide">
 
@@ -139,49 +125,36 @@ $user = $database->getUser($id);
             </div>
 
         </nav>
-
-
-
     </header>
+    <!---------------ICI LE FOREACH EST CREÉ A L'INTERIEUR DE LA ROW POUR PROFITER DES CARACTÈRES DES COL POUR AFFICHER ET RESPONSIVE-DESIGN--------------------------->
     <section class="container-fluid">
-    <div class="row  justify-content-around">
-   
- 
-    <?php                     
-    
-        foreach ($promenade as $ballade){
-
-            echo"<div class='col-lg-4 col-xs-1'>";          
-
-            echo "<div class='card  mb-5 mesCartes'>
-            <a href='afficherInfo.php?id=".$ballade->getId()."'><img class='card-img-top' src='".$ballade->getImage()."' alt='Card image cap'></a>
-            <div class='card-body'>                           
-
-            <h2 class='card-title'>".$ballade->getTitre()."</h2>
-            <h4 class='card-title'>".$ballade->getPays()."</h4>
-            <h5 class='card-title'>".$ballade->getVille()."</h5>
-            <h6 class='card-title'>".$ballade->getAuteur()."</h6>
-            <h6 class='card-title'>".$ballade->getCP()."</h6>
-            <p class='card-text'>".$ballade->getDescription()."</p><br>
+        <div class="row  justify-content-around"> 
+            <?php                     
             
-            
-            </div>
-            </div></div>"
-        ;}                                          
-    ?>           
+                foreach ($promenade as $ballade){
 
+                    echo"<div class='col-lg-4 col-xs-1'>";          
+                                        // MB-5   =   MARGIN-BOTTOM 
+                        echo "<div class='card  mb-5 mesCartes'>
+                                <a href='afficherInfo.php?id=".$ballade->getId()."'><img class='card-img-top' src='".$ballade->getImage()."' alt='Card image cap'></a>
+                                <div class='card-body'>                           
 
-            
-    
- 
-    
-  
+                                <h2 class='card-title'>".$ballade->getTitre()."</h2>
+                                <h4 class='card-title'>".$ballade->getPays()."</h4>
+                                <h5 class='card-title'>".$ballade->getVille()."</h5>
+                                <h6 class='card-title'>".$ballade->getAuteur()."</h6>
+                                <h6 class='card-title'>".$ballade->getCP()."</h6>
+                                <p class='card-text'>".$ballade->getDescription()."</p><br>
+                    
+                    
+                                </div>
+                            </div>
+                        </div>"
+                ;}                                          
+            ?>       
+        </div>
+    </section>
 
-
-</div>
-
-</section>
-</div></div>
 
 
     <footer>

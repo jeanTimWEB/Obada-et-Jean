@@ -18,6 +18,8 @@ $faux = $_GET['faux'];
             }
 
         ?>
+    <!-----------------FORMULAIRE DE LOGIN / LOGIN - PASSWORD-------------------------->
+
         <!--creation du formulaire de login avec bouton valider--->
         <form action="process-login.php" method="post">
             <input type="text" name="username" placeholder="username" required>

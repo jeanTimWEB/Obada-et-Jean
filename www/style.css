@@ -124,19 +124,19 @@ input{
 }
 
 .info-carte{
-
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
   font-weight: 700;
-
 }
 
 .info-description{
-
   font-style: italic;
-
 }
+
 i{
   font-size:3rem;
   color:black;
+}
+a:hover{
+  background-color: rgba(0, 0, 255, 0.295);
+  border-radius: 30%;
 }

@@ -40,11 +40,12 @@ class Database
                 
     }
     //methodes - comportement
-    //methodes - comportement
+   
     public function getConnexion()
     {
         return $this->connexion;
     }
+//----------------------------------------------------------------------------------------------------------------------------------------------------
     // Fonction qui récupère une promenade en fonction de son id
     public function getPromenade($id)
     {
@@ -65,8 +66,8 @@ class Database
         //var_dump($maPromenade);
         return $maPromenade;
     }
-
-
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+  // Fonction qui récupère  toutes les promenades et retourne des objet de class Promenade
     public function getAllPromenades()
     {
 
@@ -84,7 +85,8 @@ class Database
       
 
     }
-
+//----------------------------------------------------------------------------------------------------------------------------------------------------    
+  // Fonction pour ajouter/creer des datas
     public function ajouter( $titre, $pays, $image, $auteur, $codePostale, $depart, $arrivee, $description, $ville)
     {
 
@@ -112,7 +114,8 @@ class Database
         return $id;
 
     }
-
+//----------------------------------------------------------------------------------------------------------------------------------------------------    
+  // Fonction pour modifier des datas existante
     //--------------------------------------------------------------------
     public function modifier($id, $titre, $pays,$image, $auteur, $codePostale, $depart, $arrivee, $description, $ville)
     {
@@ -151,8 +154,8 @@ class Database
 
     }
 
-    //--------------------------------------------------------------------
-
+//-------------------------------------------------------------------------------------------------------------------------------------
+ // Fonction pour rechercher (moteur de recherche) et retourne les résultats sous la forme de classe complète
         
     public function search($mot){
 
@@ -180,8 +183,8 @@ class Database
 
 
     }
-
-
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+//fonction pour creer un user - SIGNIN
 
     public function insertUser($nom, $prenom, $email, $username, $password){
 
@@ -198,19 +201,8 @@ class Database
                     ]);
 
     }
-
-//
-/*
-    public function loginUser(){
-
-$pdoStatement = $this->connexion->prepare("SELECT * FROM users WHERE username = 'Obada';");
-$pdoStatement->execute();
-
-    }
-*/
-
-
-
+//----------------------------------------------------------------------------------------------------------------------------------------------------    
+//fonction pour récuperer les id et username de l'utilisateur pour la sesssion
 
     public function getPasswordAndId($username){
 
@@ -229,7 +221,7 @@ $pdoStatement->execute();
      return $resultat;
 
     }
-
+//fonction pour connaitre le nom de l'utilsateur authentifié
     public function getUser($id){
 
         $pdoStatement = $this->connexion->prepare(
@@ -247,6 +239,17 @@ $pdoStatement->execute();
         return $user;
 
 
+    }
+
+    public function compareUsers(){
+
+        $pdoStatement = $this->connexion->prepare("SELECT username from users;");
+        $pdoStatement->execute();
+
+
+        $allUsers = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'User');
+        //var_dump($maPromenade);
+        return $allUsers;
     }
 
 

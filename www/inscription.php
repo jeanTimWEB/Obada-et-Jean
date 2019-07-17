@@ -1,3 +1,15 @@
+<?php 
+
+$error = $_GET['user'];
+
+if(isset($error)){
+
+    echo "le nom d'utlisateur est deja utlisé";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>

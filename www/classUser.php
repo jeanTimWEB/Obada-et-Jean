@@ -1,5 +1,5 @@
 <?php 
-
+/*la class user sert a stocker les datas des utilisateurs authentifiés*/
 class User{
 
     private $id;
