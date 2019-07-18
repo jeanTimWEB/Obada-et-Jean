@@ -182,12 +182,12 @@
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="btn-floating btn-tw mx-1" href="https://twitter.com">
+                        <a class="btn-floating btn-tw mx-1" href="https://www.linkedin.com/">
                         <i class="fab fa-linkedin"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="btn-floating btn-gplus mx-1" href="https://www.youtube.com/?hl=FR">
+                        <a class="btn-floating btn-gplus mx-1" href="https://twitter.com">
                         <i class="fab fa-twitter"></i>
                         </a>
                     </li>
