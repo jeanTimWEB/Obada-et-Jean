@@ -34,7 +34,7 @@ require_once "database.php";
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-            <img class="pics" src="assets/baby-feet-icon-4.png" width="50" height="50" alt="feet-icon">
+            <img src="assets/baby-feet-icon-4.png" width="50" height="50" alt="feet-icon">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
