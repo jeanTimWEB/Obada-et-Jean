@@ -155,7 +155,7 @@
         </div>
     </section>
 
-
+<br><br><br><br>
 
     <footer>
         <!--Jean-->
@@ -191,7 +191,6 @@
                         <i class="fab fa-twitter"></i>
                         </a>
                     </li>
-
                 </ul>
                 <!-- Social buttons -->
 

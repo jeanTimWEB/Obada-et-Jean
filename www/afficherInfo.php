@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once "database.php";
 
 $database = new Database();
@@ -175,7 +175,6 @@ $promenade = $database->getPromenade($id);
                         <i class="fab fa-twitter"></i>
                         </a>
                     </li>
-
                 </ul>
                 <!-- Social buttons -->
 
