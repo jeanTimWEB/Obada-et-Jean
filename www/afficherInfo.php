@@ -33,7 +33,7 @@ $promenade = $database->getPromenade($id);
             background-image:url("<?php echo $promenade->getImage();?>");
             background-repeat: no-repeat;
             background-size: cover;
-            min-height: 750px;
+            min-height: 850px;
         }
         
         .hide{
@@ -144,7 +144,7 @@ $promenade = $database->getPromenade($id);
         <footer>
         <!--Jean-->
 
-        <div class="container-fluid fixed-bottom bg-light">
+        <div class="container-fluid fixed-bottom bg-light d-none d-md-block">
 
             <!-- Grid row -->
             <div class="row justify-content-around align-items-center">

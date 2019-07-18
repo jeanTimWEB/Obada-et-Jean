@@ -124,7 +124,7 @@
         <footer>
         <!--Jean-->
 
-        <div class="container-fluid fixed-bottom bg-light">
+        <div class="container-fluid fixed-bottom bg-light d-none d-md-block">
 
             <!-- Grid row -->
             <div class="row justify-content-around align-items-center">

@@ -79,7 +79,7 @@
 
                     </li>
 
-                    <li class="nav-item active">
+                    <li class="nav-item">
 
                         <a class="nav-link hide2" href="login.php">Login </a>
 
