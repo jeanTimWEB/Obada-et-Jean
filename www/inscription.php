@@ -25,6 +25,7 @@
         background-image: url("assets/img(11).jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        min-height: 850px;
 
     }
 
@@ -118,7 +119,7 @@
         <footer>
             <!--Jean-->
 
-            <div class="container-fluid fixed-bottom bg-light">
+            <div class="container-fluid fixed-bottom bg-light d-none d-md-block">
 
                 <!-- Grid row -->
                 <div class="row justify-content-around align-items-center">
