@@ -33,7 +33,7 @@ $faux = $_GET['faux'];
 
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
 
-                    <li class="nav-item active">
+                    <li class="nav-item">
 
                         <a class="nav-link " href="index.php">Index </a>
 
@@ -50,27 +50,6 @@ $faux = $_GET['faux'];
                     <li class="nav-item">
 
                         <a class="nav-link hide2" href="inscription.php">SignUp</a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a class="nav-link hide" href="ajouter.php">Ajouter</a>
-
-                    </li>
-
-
-
-                    <li class="nav-item hide">
-
-                        <a href=""  class="nav-link hide" >bonjour <?php if($_SESSION['logged'] === true){echo $user->getPrenom();}?></a> 
-
-                    </li>   
-
-                    
-                    <li class="nav-item">
-
-                        <a class="nav-link hide" href="process-deconnecter.php">Deconnecter</a>
 
                     </li>
 

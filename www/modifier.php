@@ -78,12 +78,11 @@ require_once "database.php";
 
     <section class="container-fluid">
 
-
-
-                <form action="process-modifier.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
-        <div class="row justify-content-around ">
-            <div class="col-lg-6 col-xs-12">
-                                    <br>
+        <form action="process-modifier.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+            <div class="row justify-content-around ">
+                <div class="col-lg-6 col-xs-12">
+                    
+                    <br>
                     <label for="titre">titre: </label><br>
                     <input type="text" name="titre" value="<?php echo $promenade->getTitre()?>">
 
@@ -95,47 +94,38 @@ require_once "database.php";
                     <label for="ville">ville: </label><br>
                     <input type="text" name="ville" value="<?php echo $promenade->getVille()?>"> <br>
 
-                  
+                
                     <label for="codePostale">codePostale: </label><br>
                     <input type="number" name="codePostale" value="<?php echo $promenade->getCP()?>"> <br>
 
-                   
+                
                     <label for="depart">depart: </label><br>
                     <input type="text" name="depart" value="<?php echo $promenade->getDepart()?>"> <br>
 
-                  
+                
                     <label for="arrivee">arrivee: </label><br>
                     <input type="text" name="arrivee" value="<?php echo $promenade->getArrivee()?>"> <br>
 
-                  
+                
                     <label for="auteur">auteur: </label><br>
                     <input type="text" name="auteur" value="<?php echo $promenade->getAuteur()?>"> <br>
 
-               
-
-       
-                   
+            
                     <label for="image">image: </label><br>
-                    <input type="file" name="image" > <br><br>
+                    <input type="file" name="image" value="<?php echo $promenade->getImage()?>"> <br><br>
                             
+                </div>
+            
+                <div class="col-md-6">
+                    <br><br>
+                    <label for="description">description: </label>
+                    <textarea rows="10" cols="35" type="text" name="description" maxlength="300"> 
+                        <?php echo $promenade->getDescription()?></textarea> <br>
 
-
+                    <input type="submit">
+                </div>
             </div>
-        
-            <div class="col-md-6">
-<br><br>
-                <label for="description">description: </label>
-                <textarea rows="10" cols="35" type="text" name="description" maxlength="300"> 
-                    <?php echo $promenade->getDescription()?></textarea> <br>
-
-
-                
-
-
-                <input type="submit">
-            </div>
-        </div>
-                </form>
+        </form>
               
       
     </section>
