@@ -154,12 +154,12 @@ require_once "database.php";
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn-floating btn-tw mx-1" href="https://twitter.com">
+                            <a class="btn-floating btn-tw mx-1" href="https://www.linkedin.com/">
                                 <img class="icon" src="assets/icon-Twitter.png" alt="" width="50">
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn-floating btn-gplus mx-1" href="https://www.youtube.com/?hl=FR">
+                            <a class="btn-floating btn-gplus mx-1" href="https://twitter.com">
                                 <img class="icon" src="assets/icon-YT.png" alt="" width="50">
                             </a>
                         </li>
