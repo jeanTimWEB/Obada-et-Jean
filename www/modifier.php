@@ -22,6 +22,7 @@ require_once "database.php";
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bf302c0b12.js"></script>
     <meta charset="utf-8">
 </head>
 
@@ -146,26 +147,25 @@ require_once "database.php";
     
                     </div>
     
-                    <!-- Social buttons -->
-                    <ul class="list-unstyled list-inline txt-center">
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/"><img
-                                class="icon"       src="assets/icon-FB.png" alt="" width="50">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-tw mx-1" href="https://www.linkedin.com/">
-                                <img class="icon" src="assets/icon-Twitter.png" alt="" width="50">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-gplus mx-1" href="https://twitter.com">
-                                <img class="icon" src="assets/icon-YT.png" alt="" width="50">
-                            </a>
-                        </li>
-    
-                    </ul>
-                    <!-- Social buttons -->
+                <!-- Social buttons -->
+                <ul class="list-unstyled list-inline txt-center">
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/">
+                        <i class="fab fa-facebook"></i>                  
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-tw mx-1" href="https://www.linkedin.com/">
+                        <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-gplus mx-1" href="https://twitter.com">
+                        <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Social buttons -->
     
                     <!-- Call to action -->
                     <ul class="list-unstyled">
