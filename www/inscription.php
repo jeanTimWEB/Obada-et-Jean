@@ -1,15 +1,3 @@
-<?php 
-
-$error = $_GET['user'];
-
-if(isset($error)){
-
-    echo "le nom d'utlisateur est deja utlisé";
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -109,12 +97,23 @@ if(isset($error)){
                         <strong> <label for="password">Password: </label> <br> </strong>
                         <input type="password" name="password" required>   
                         <br><br>
-                        <input type="submit" value="Valider">
+                        <input type="submit" value="Valider"> <br><br>
+                        <?php 
+
+                            $error = $_GET['user'];
+
+                            if(isset($error)){
+
+                                echo "le nom d'utlisateur est deja utlisé";
+                            }
+
+                        ?>
 
                     </div>
                 </div>
             </form>
         </section>
+
 
         <footer>
             <!--Jean-->
